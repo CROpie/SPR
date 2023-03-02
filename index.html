@@ -7,13 +7,15 @@
         <script type="text/javascript" src="spr.js" defer></script>
     </head>
     <body>
-        <button id="scissors">SCISSORS</button>
-        <button id="paper">PAPER</button>
-        <button id="rock">ROCK</button>
-        <button id="reset">RESET</button>
-        <div class="results"></div>
-        <div class="wins" id="player_wins"></div>
-        <div class="losses" id="computer_wins"></div>
-        <div class="draws" id="nobody_wins"></div>
+        <div id="container">
+            <button id="scissors" class="throw" data-num="0">SCISSORS</button>
+            <button id="paper" class="throw" data-num="1">PAPER</button>
+            <button id="rock" class="throw" data-num="2">ROCK</button>
+            <button id="reset">RESET</button>
+        </div>
+        <div id="results">Result:</div>
+        <div class="wld" id="player_wins">0</div>
+        <div class="wld" id="computer_wins">0</div>
+        <div class="wld" id="nobody_wins">0</div>
     </body>
 </html>
