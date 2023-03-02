@@ -1,4 +1,82 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+
+body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.human {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.battle_ground {
+    padding-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.VS {
+    font-size: 50px;
+}
+
+.battle_container {
+    display: flex;
+    align-items: center;
+}
+
+#results {
+    
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#reset {
+    font-size: 24px;
+}
+.throw-image {
+    height: 100px;
+    width: 100px;
+    margin: 20px;
+}
+.title {
+    display: flex;
+    font-size: 40px;
+}
+
+.wins-container {
+    display: flex;
+    justify-content: space-between;
+}
+
 .wld {
-    border: 1px solid black;
-    width: 50px;
+    display: flex;
+    font-size: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.throw,
+.comp-throw {
+    font-size: 20px;
+}
+
+.comp-throw {
+    background-color: white;
+    color: grey;
+}
+
+.button_container {
+    display: flex;
+    gap: 5px;
+    padding: 20px;
+    margin-top: 20px;
 }

@@ -22,9 +22,7 @@ function check_for_winner() {
 
 function determineWinner(computer, player) {
     if (computer === player) {
-        draws_score++
         results_table.textContent = 'Draw!'
-        table_draws.textContent = draws_score;
     }   else if ((player === 0 && computer === 1) || (player === 1 && computer === 2) || (player === 2 && computer === 0)) {
         player_score++
         results_table.textContent = 'You Win!'
@@ -45,8 +43,36 @@ function getComputerChoice() {
     return getRandomInt(3);
 }
 
+function getImage (player, throw_choice) {
+    if (player === 0) {
+        if (throw_choice === 0) {
+            document.querySelector('#left-image').src = "scissors.png";
+        }
+        if (throw_choice === 1) {
+            document.querySelector('#left-image').src = "paper.jpg";
+        }
+        if (throw_choice === 2) {
+            document.querySelector('#left-image').src = "rock.png";
+        }
+    } 
+
+    if (player === 1) {
+        if (throw_choice === 0) {
+            document.querySelector('#right-image').src = "scissors.png";
+        }
+        if (throw_choice === 1) {
+            document.querySelector('#right-image').src = "paper.jpg";
+        }
+        if (throw_choice === 2) {
+            document.querySelector('#right-image').src = "rock.png";
+        }
+    }
+}
+
 function playGame(throw_choice) {
     computer = getComputerChoice();
+    getImage(0, throw_choice);
+    getImage(1, computer);
     return determineWinner(computer, throw_choice);
 }
 
@@ -54,14 +80,15 @@ function playGame(throw_choice) {
 function reset_scores() {
     table_wins.textContent = (player_score = 0);
     table_losses.textContent = (computer_score = 0);
-    table_draws.textContent = (draws_score = 0);
+    results_table.textContent = 'Result:';
+    document.querySelector('#left-image').src = "white.jpg";
+    document.querySelector('#right-image').src = "white.jpg";
     unfreeze_buttons();
 }
 
 // Initialize score variables
 let player_score = 0;
 let computer_score = 0;
-let draws_score = 0;
 
 // Set up variables to easly refer to the text fields
 const results_table = document.querySelector('#results');

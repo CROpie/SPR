@@ -7,15 +7,38 @@
         <script type="text/javascript" src="spr.js" defer></script>
     </head>
     <body>
-        <div id="container">
-            <button id="scissors" class="throw" data-num="0">SCISSORS</button>
-            <button id="paper" class="throw" data-num="1">PAPER</button>
-            <button id="rock" class="throw" data-num="2">ROCK</button>
+        <div class="human">
+            <div class="title" id="p1-title">Player 1</div>
+            <div class="button_container">
+                <button id="scissors" class="throw" data-num="0">SCISSORS</button>
+                <button id="paper" class="throw" data-num="1">PAPER</button>
+                <button id="rock" class="throw" data-num="2">ROCK</button>
+            </div>
+        </div>
+
+        <div class="battle_ground">
+            <div class="wins-container">
+                <div class="wld" id="player_wins">0</div>
+                <div class="wld" id="computer_wins">0</div>
+            </div>
+            <div class="battle_container">
+                <div class="left-throw"></div>
+                    <img id="left-image" class="throw-image" src="white.jpg">
+                <div class="VS">VS</div>
+                <div class="right-throw"></div>
+                    <img id="right-image" class="throw-image" src="white.jpg">
+            </div>
+            <div id="results">Result:</div>
             <button id="reset">RESET</button>
         </div>
-        <div id="results">Result:</div>
-        <div class="wld" id="player_wins">0</div>
-        <div class="wld" id="computer_wins">0</div>
-        <div class="wld" id="nobody_wins">0</div>
+
+        <div class="computer">
+            <div class="title">Computer</div>
+            <div class="button_container">
+                <button class="comp-throw">ROCK</button>
+                <button class="comp-throw">PAPER</button>
+                <button class="comp-throw">SCISSORS</button>
+        </div>
+
     </body>
 </html>
